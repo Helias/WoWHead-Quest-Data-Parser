@@ -1,8 +1,8 @@
 <?php
-//$quest = "123";
-//$quest = "147";
-//$quest = "12477";
-$quest = "12969";
+if ($_GET['quest'] == "" || !isset($_GET['quest']))
+	$quest = "12969";
+else
+	$quest = $_GET['quest'];
 
 $data = file_get_contents("http://www.wowhead.com/quest=" . $quest);
 ?>
